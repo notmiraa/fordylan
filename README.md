@@ -7,4 +7,4 @@ this the so-called "app dev" i been grinding out the past month
     - DO NOT SKIP THIS STEP
 - go inside the folder you just made and open idk.html
 
-enjoy the show :)
+enjoy the show<3
