@@ -1,0 +1,239 @@
+body {
+    font-family: 'arial narrow';
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+h5{
+    font-size: 60px;
+    overflow: hidden; 
+    border-right: 3px solid rosybrown; 
+    white-space: nowrap; 
+    width: 0; 
+    animation: typewriter 3s steps(20) 10s forwards, fadeIn 12s forwards, blinky 0.75s step-end infinite, fadeOut 2s 20s forwards;
+    z-index: 21;
+}
+
+
+@keyframes typewriter {
+    0% { 
+      width: 0;
+    }
+    100% {
+      width: 48%;
+    }
+}
+
+@keyframes blinky {
+    from, to { 
+        border-color: transparent;
+    }
+    50% { 
+        border-color:rosybrown; 
+    }
+}
+
+/* Heart Animation */
+#heart-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: rosybrown;
+    font-style: italic;
+    z-index: 10;
+    animation: glitch 3s 17s infinite;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    background: rgb(120, 94, 94);
+    position: absolute;
+    opacity: 0;
+    animation: pixelAnimation 12s forwards 0s;
+    z-index:20;
+}
+
+.pixel:hover, .p:hover, .q:hover{
+    background: linear-gradient(black, rosybrown);
+}
+
+.p {
+    width:40px;
+    height:40px;
+    background-color:rgb(97, 72, 72);
+    position: absolute;
+    opacity: 0;
+    animation: pixelAnimation 12s forwards 0.5s;
+    z-index:19;
+}
+
+
+.q {
+    width:40px;
+    height:40px;
+    background-color:rgb(62, 54, 54);
+    position: absolute;
+    opacity: 0;
+    animation: pixelAnimation 12s forwards 1s;
+    z-index:18;
+}
+
+.c {
+    background: linear-gradient(rosybrown, white, rosybrown);
+    height: 20px;
+    width: 10px;
+}
+
+.c1 {
+    background: linear-gradient(indianred, white, indianred);
+    height: 20px;
+    width: 10px;
+}
+
+.c2 {
+    background: linear-gradient(indianred, white, indianred);
+    height: 20px;
+    width: 10px;
+}
+
+
+
+@keyframes pixelAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1) translate(0, 0);
+    }
+    20% {
+        opacity: 0.8;
+        transform: scale(1) translate(330px, 0);
+    }
+    40% {
+        opacity: 0.8;
+        transform: scale(1) translate(-330px, 0);
+    }
+    60% {
+        opacity: 0.8;
+        transform: scale(1.1) translate(300px, 0); /* float effect */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8) translate(-300px, 0); /* float away */
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+/*confetti*/
+.container {
+    width: 100%;
+    height: 100%;
+}
+.confetti {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    animation: fadeIn 15s, confetti 5s ease-in-out -2s infinite;
+    transform-origin: top;
+}
+.confetti:nth-child(1) {
+    background-color: rosybrown; left: 15%; animation-delay: 0;
+}
+
+.confetti:nth-child(2) {
+    background-color: #a58bb5; left: 20%; animation-delay: -3s;
+}
+
+.confetti:nth-child(3) {
+    background-color: rgb(145, 74, 72); left: 25%; animation-delay: -2.1s;
+}
+
+.confetti:nth-child(4) {
+    background-color: rosybrown; left: 30%; animation-delay: -2.5s;
+}
+
+.confetti:nth-child(5) {
+    background-color: #a58bb5; left: 35%; animation-delay: -4s;
+}
+
+.confetti:nth-child(6) {
+    background-color: rgb(145, 74, 72); left: 40%; animation-delay: -2.7s;
+}
+
+.confetti:nth-child(7) {
+    background: rosybrown; left: 45%; animation-delay: -1.5s;
+}
+
+.confetti:nth-child(8) {
+    background: #a58bb5; left: 50%; animation-delay: -2s;
+}
+        
+.confetti:nth-child(9) {
+    background: rgb(145, 74, 72); left: 55%; animation-delay: -3.5s;
+}
+
+.confetti:nth-child(10) {
+    background: rosybrown; left: 60%; animation-delay: 0s;
+}
+
+.confetti:nth-child(11) {
+    background: #a58bb5; left: 65%; animation-delay: -3s;
+}
+
+.confetti:nth-child(12) {
+    background: rgb(145, 74, 72); left: 70%; animation-delay: -1.5s;
+}
+
+.confetti:nth-child(13) {
+    background: #a58bb5; left: 75%; animation-delay: -2s;
+}
+
+.confetti:nth-child(14) {
+    background: rosybrown; left: 80%; animation-delay: -0.5s;
+}
+.confetti:nth-child(15) {
+    background: #a58bb5; left: 85%; animation-delay: -3.4s;
+}
+.confetti:nth-child(15) {
+    background: rgb(145, 74, 72); left: 90%; animation-delay: -3.4s;
+}
+
+@keyframes confetti {
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vh,20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vh,60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vh,80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10px,90vh); }
+}
+        
