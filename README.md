@@ -6,4 +6,4 @@ this the so-called "app dev" i been grinding out the past month
     - this creates a folder version of the ZIP file
     - make sure to do this - it won't work without
 - go inside the folder you just made and then open idk.html
-- yippee
+yippee
